@@ -203,7 +203,7 @@ const LIFEInvocationOptions LIFEInvocationOptionsScreenRecordingFinished = 1 << 
     [LIFECategories loadCategories];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_userDidTakeScreenshotNotification:) name:UIApplicationUserDidTakeScreenshotNotification object:nil];
-    self.screenRecordingInvocationEnabled = YES; // Start the screen recording observer
+    self.screenRecordingInvocationEnabled = NO; // Start the screen recording observer
     
     [self _enableOrDisableBugButton];
     [self.dataProvider flushPendingReportsAfterDelay:2.0];
